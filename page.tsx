@@ -25,11 +25,7 @@ const MyComponent: FC = () => {
 
   const [map, setMap] = useState<google.maps.Map | null>(null);
 
-  const onLoad = useCallback((map: google.maps.Map) => {
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
-    setMap(map);
-  }, []);
+ 
 
   const onUnmount = useCallback((map: google.maps.Map) => {
     setMap(null);
@@ -39,8 +35,7 @@ const MyComponent: FC = () => {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={6}
-      onLoad={onLoad}
+      zoom={11}
       onUnmount={onUnmount}
       onClick={handleMapClick}
     >
