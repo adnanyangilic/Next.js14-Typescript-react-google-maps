@@ -23,11 +23,6 @@ const MyComponent: FC = () => {
     alert('Map clicked at: ' + event.latLng);
   };
 
-  const [map, setMap] = useState<google.maps.Map | null>(null);
-
- 
-
- 
 
   return isLoaded ? (
     <GoogleMap
