@@ -27,16 +27,14 @@ const MyComponent: FC = () => {
 
  
 
-  const onUnmount = useCallback((map: google.maps.Map) => {
-    setMap(null);
-  }, []);
+ 
 
   return isLoaded ? (
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
       zoom={11}
-      onUnmount={onUnmount}
+   
       onClick={handleMapClick}
     >
       { /* other components, such as markers, info windows, etc. */ }
